@@ -26,7 +26,7 @@ app.use('/card', cardRoutes)
 const PORT = process.env.PORT || 3000   // или мы получаем порт из консоли терминала или порт 3000
 async function start() {   // подключаемся к базе данных и после этого запускаем сервер
     try {
-        const url = 'mongodb+srv://Dmitrii:uGeBesnwXGNhKqws@cluster0-wl4gy.mongodb.net/test?retryWrites=true&w=majority'
+        const url = 'url-mongodb'
         await mongoose.connect(url, {useUnifiedTopology: true, useNewUrlParser: true})
         app.listen(PORT, () => {  // запуск сервера
             console.log(`Сервер был запущен на порту ${PORT}`)
